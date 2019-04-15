@@ -37,6 +37,12 @@ public class Main {
         //i=i+1;
         System.out.println(i);
         System.out.println(i2);
+         int bi1 = 0b0010;
+         int bi2 = 0b1011;
+        System.out.println("bi1 & bi2 = "+ Integer.toBinaryString(bi1 & bi2));
+        System.out.println("bi1 | bi2 = "+ Integer.toBinaryString(bi1 | bi2));
+        System.out.println("bi1 ^ bi2 = "+ Integer.toBinaryString(bi1 ^ bi2));
+        //System.out.println("bi1 ~ bi2 = "+ Integer.toBinaryString(bi1 ~ bi2));
 
     }
 }
