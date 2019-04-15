@@ -65,7 +65,8 @@ public class Car {
             System.out.println("car: Nomber="+carNomber+"; Brand="+carBrand+"; Model="+carModel+"; benefit="+this.benefit()+
                     "; in stock="+carInStock);}
             else {
-                System.out.println("cars not yet sold");
+                System.out.println("cars not yet sold");//commit to git
+				//aerhglaijga,dkjghlaiugb.
             }
         }
 
