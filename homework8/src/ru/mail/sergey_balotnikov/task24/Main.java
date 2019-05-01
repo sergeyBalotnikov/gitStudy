@@ -1,27 +1,24 @@
 package ru.mail.sergey_balotnikov.task24;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 public class Main {
-    public static void main(String[] args) throws Exception {
-        SmartAppliances SmartTV = new SmartAppliances();
-        SmartTV.setDescription("LG smart tv, 50 inch");
-        SmartTV.setWarrantyPeriod("1 year");
-        SmartTV.setPurchaseDay("24.05.2018");
-        SmartTV.getPurchaseDay();
-        SmartTV.isGaurantes();
-        System.out.println("Is on: "+SmartTV.isOn());
-        SmartTV.plugUnplug();
-        System.out.println("Is on: "+SmartTV.isOn());
-        SmartTV.plugUnplug();
-        System.out.println("Is on: "+SmartTV.isOn());
-        AnalogAppliances toster = new AnalogAppliances();
-        toster.setDescription("Toaster");
-        toster.setPurchaseDay("20.1.2008");
-        toster.obsolescence();
-        SmartTV.obsolescence();
+    public static void main(String[] args) {
+        SmartAppliences TV = new SmartAppliences();
+        TV.setDescription("Smart TV");
+        TV.isOn();
+        System.out.println(TV);
+        TV.isOff();
+        System.out.println(TV);
+        TV.isOn();
+        TV.setWiFiModule(false);
+        System.out.println(TV);
+        TV.setWiFiModule(true);
+        System.out.println(TV);
 
-
+        AnalogAppliances toaster = new AnalogAppliances();
+        toaster.setDescription("Toaster");
+        toaster.isOn();
+        System.out.println(toaster);
+        toaster.isOff();
+        System.out.println(toaster);
     }
 }
