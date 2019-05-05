@@ -7,7 +7,7 @@ public class Homes {
         Scanner in = new Scanner(System.in);
         String A;
         int a,b,c,d,e,f;
-        //получение значений с консоли с проверкой
+        //получение значений с консоли, с проверкой
         while(true){
             try{
                 System.out.println("input width of the first house a: ");
@@ -81,20 +81,17 @@ public class Homes {
             }
         }
 
-
         int temp = 0;
-        if (a>b){} else {temp=a; a = b; b = temp;}
-        if (c>d){} else {temp=c; c = d; d = temp;}
-        if (e>f){} else {temp=e; e = f; f = temp;}
+        if (a>=b){} else {temp=a; a = b; b = temp;}
+        if (c>=d){} else {temp=c; c = d; d = temp;}
+        if (e>=f){} else {temp=e; e = f; f = temp;}
 
-        if(a*b+c*d > e*f){
-            System.out.println("not enough space. the houses will not fit on the plot.");
-        } else if (e<a || e<c || f<b || f<d){
-            System.out.println("too narrow area. the houses will not fit on the plot.");
-        } else if (a+c<=e || (a+d<=e && c<=f) || a+d<=f || (b+c<=e && a<=f) || b+c<=f ||
+        System.out.print("Result: ");
+        if (a+c<=e || (a+d<=e && c<=f) || a+d<=f || (b+c<=e && a<=f) || b+c<=f ||
                 (b+d<=e && Math.max(a,c)<=f )|| b+d<=f || a+c<=f){
             System.out.println("the houses will fit on the plot.");
-
+        } else {
+            System.out.println("the house will not fit on the plot");
         }
     }
 
