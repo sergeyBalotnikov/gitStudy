@@ -1,6 +1,6 @@
 package ru.mail.sergey_balotnikov.task54;
 
-import java.lang.reflect.Array;
+
 import java.util.Scanner;
 
 public class Task54_AccountingFormat {
@@ -23,7 +23,7 @@ public class Task54_AccountingFormat {
         char [] inputValToChar = inputValue.toCharArray();
         for(int i = 0; i<inputValToChar.length; i++){
             System.out.print(inputValToChar[i]);
-            if((inputValToChar.length-i-1)%3 == 0 && inputValToChar[i]!='-'){
+            if((inputValToChar.length-i-1)%3 == 0 && inputValToChar[i]!='-' && i!=inputValToChar.length-1){
                 System.out.print(" ");
             }
         }
