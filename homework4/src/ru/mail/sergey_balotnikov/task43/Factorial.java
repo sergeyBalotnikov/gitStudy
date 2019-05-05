@@ -1,28 +1,31 @@
 package ru.mail.sergey_balotnikov.task43;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Factorial {
+public class Factorial {//4249290049419214848
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int nomFactorial = 0;
 
         boolean correctNom = false;
         for (;correctNom==false;){
-            System.out.println("whith  number factorial do you want to calculate:");
+            System.out.println("What number factorial do you want to calculate:");
             try {nomFactorial = Integer.parseInt(in.nextLine());
                 correctNom = true;
             } catch (NumberFormatException e){
 
-            } finally {
-            System.out.println("You enter not a number. Try again.");
-
+                System.out.println("You enter not a number. Try again.");
             }
         }
-        int factorial = 1;
-        for (int i = 1; i<=nomFactorial;i++){
+        long factorial = 1;
+        for (int i = 1; i<=Math.abs(nomFactorial);i++){
             factorial*=i;
         }
+        if(nomFactorial<0 &&nomFactorial%2!=0){
+            factorial=-factorial;
+        }
+        if(nomFactorial==0){factorial=0;}
         System.out.println("factorial of "+nomFactorial+" = " +factorial);
     }
 }
