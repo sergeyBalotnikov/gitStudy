@@ -11,13 +11,48 @@ public class NextDay {
         int yearNom = 0;
         
         int [] monthArray = {31,28,31,30,31,30,31,31,30,31,30,31};
-        System.out.println("Input day:");
-        dayNom = Integer.parseInt(in.nextLine());
-        System.out.println("Input month:");
-        monthNom = Integer.parseInt(in.nextLine());
-        System.out.println("Input year:");
-        yearNom = Integer.parseInt(in.nextLine());
-        
+        //получаем значения с консоли и проверяем их корректность
+        while (true){
+            try {
+            System.out.println("Input year:");
+            yearNom = Integer.parseInt(in.nextLine());
+            if(yearNom>0){break;} else {
+                System.out.println("value should be positive");
+            }
+            }catch(Exception e){
+                System.out.println("value should be numeric");
+            }}
+        while(true){
+            try{
+                System.out.println("Input month:");
+                monthNom = Integer.parseInt(in.nextLine());
+                if(monthNom <= 0 || monthNom>12){
+                    System.out.println("value should be positive, from 1 to 12");
+                } else {break;}
+            } catch (Exception e){
+                System.out.println("value should be numeric");
+
+            }}
+        while (true) {
+            try {
+                System.out.println("Input day:");
+                dayNom = Integer.parseInt(in.nextLine());
+                if (dayNom>29 && ((yearNom%4==0&&yearNom%100!=0) || yearNom%400==0) && monthNom==2){
+                    System.out.println("This month has not this day.");
+                } else if(dayNom>28 && !((yearNom%4==0&&yearNom%100!=0) || yearNom%400==0) && monthNom==2){
+                    System.out.println("This month has not this day.");
+                } else if(dayNom>30&&(monthNom==4 || monthNom==6 || monthNom==9 || monthNom==11)){
+                    System.out.println("This month has not this day.");
+                } else if(dayNom>31){
+                    System.out.println("no one months has not this day.");
+                } else if (dayNom<=0){
+                    System.out.println("value should be positive and not zero");
+                } else {break;}
+            } catch (Exception e){
+                System.out.println("value should be numeric");
+            }
+        }
+
         if((yearNom%4==0&&yearNom%100!=0)||yearNom%400==0)
         {
             monthArray[1] = 29;
@@ -35,7 +70,7 @@ public class NextDay {
             }
 
         }
-        System.out.println(dayNom +" "+ monthNom+" " +yearNom);
+        System.out.println("next day is :"+dayNom +" "+ monthNom+" " +yearNom);
 
        }
 }
