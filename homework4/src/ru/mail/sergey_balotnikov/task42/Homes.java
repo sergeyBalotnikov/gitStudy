@@ -5,19 +5,82 @@ import java.util.Scanner;
 public class Homes {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("input width of the first house a: ");
-        int a = Integer.parseInt(in.nextLine());
-        System.out.println("input length  of the first house b: ");
-        int b = Integer.parseInt(in.nextLine());
-        System.out.println("input width  of the second house c: ");
-        int c = Integer.parseInt(in.nextLine());
-        System.out.println("input length  of the second house d: ");
-        int d = Integer.parseInt(in.nextLine());
-        System.out.println("input width  of the grounds e: ");
-        int e = Integer.parseInt(in.nextLine());
-        System.out.println("input length  of the grounds f: ");
-        int f = Integer.parseInt(in.nextLine());
-        //boolean isFit= false;
+        String A;
+        int a,b,c,d,e,f;
+        //получение значений с консоли с проверкой
+        while(true){
+            try{
+                System.out.println("input width of the first house a: ");
+                A = in.nextLine();
+                a = Integer.parseInt(A);
+                if(a>0){break;} else {
+                    System.out.println("значением должно быть положительное число.");
+                }
+            } catch (Exception ups){
+                System.out.println("you enter wrong number");
+            }
+        }
+        while(true){
+            try{
+                System.out.println("input width of the first house b: ");
+                A = in.nextLine();
+                b = Integer.parseInt(A);
+                if(b>0){break;} else {
+                    System.out.println("значением должно быть положительное число.");
+                }
+            } catch (Exception ups){
+                System.out.println("you enter wrong number");
+            }
+        }
+        while(true){
+            try{
+                System.out.println("input width of the first house c: ");
+                A = in.nextLine();
+                c = Integer.parseInt(A);
+                if(c>0){break;} else {
+                    System.out.println("значением должно быть положительное число.");
+                }
+            } catch (Exception ups){
+                System.out.println("you enter wrong number");
+            }
+        }
+        while(true){
+            try{
+                System.out.println("input width of the first house d: ");
+                A = in.nextLine();
+                d =Integer.parseInt(A);
+                if(d>0){break;} else {
+                    System.out.println("значением должно быть положительное число.");
+                }
+            } catch (Exception ups){
+                System.out.println("you enter wrong number");
+            }
+        }
+        while(true){
+            try{
+                System.out.println("input width of the first house e: ");
+                A = in.nextLine();
+                e = Integer.parseInt(A);
+                if(e>0){break;} else {
+                    System.out.println("значением должно быть положительное число.");
+                }
+            } catch (Exception ups){
+                System.out.println("you enter wrong number");
+            }
+        }
+        while(true){
+            try{
+                System.out.println("input width of the first house f: ");
+                A = in.nextLine();
+                f = Integer.parseInt(A);
+                if(f>0){break;} else {
+                    System.out.println("значением должно быть положительное число.");
+                }
+            } catch (Exception ups){
+                System.out.println("you enter wrong number");
+            }
+        }
+
 
         int temp = 0;
         if (a>b){} else {temp=a; a = b; b = temp;}
@@ -34,4 +97,6 @@ public class Homes {
 
         }
     }
+
+
 }
