@@ -2,6 +2,8 @@ package ru.mail.sergey_balotnikov.task32;
 
 
 import java.io.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
@@ -40,9 +42,14 @@ public class Input20 {
         }
         double sum = 0;
         for (int i = 0; i<numbers.size(); i++){
-            System.out.println(new DecimalFormat("#0.00").format(numbers.get(i)));
+            BigDecimal num = new BigDecimal(numbers.get(i));
+            BigDecimal num2 = num.setScale(4,RoundingMode.HALF_EVEN);
+            //num.setScale(4, RoundingMode.HALF_EVEN);
+            System.out.println(num2);
             sum+=numbers.get(i);
         }
-        System.out.println("Average of numbers is "+new DecimalFormat("#0.00").format(sum/numbers.size()));
+        BigDecimal sum2 = new BigDecimal(sum);
+
+        System.out.println("Average of numbers is "+sum2.setScale(4, RoundingMode.HALF_EVEN));
     }
 }
